@@ -6,21 +6,28 @@
 </head>
 <body>
 	<script src="../node_modules/tweakpane/dist/tweakpane.js"></script>
-	<script src="../dist/tweakpane-plugin-template.js"></script>
+	<script src="../dist/tweakpane-plugin-chromatic.js"></script>
 	<script>
-		const params = {
-			prop: 3,
-		};
 		const pane = new Tweakpane.Pane();
 
 		// Register plugin
-		pane.registerPlugin(TweakpaneTemplatePlugin);
+		pane.registerPlugin(TweakpaneChromaticPlugin);
 
-		// TODO: Update parameters for your plugin
-		pane.addInput(params, 'prop', {
-			view: 'dots',
-		}).on('change', (ev) => {
-			console.log(ev.value);
+		pane.addBlade({
+			view: 'chromatic',
+			label: 'palette',
+			colors: [
+				'#fde725',
+				'#b5de2b',
+				'#6ece58',
+				'#35b779',
+				'#1f9e89',
+				'#26828e',
+				'#31688e',
+				'#3e4989',
+				'#482878',
+				'#440154'
+			]
 		});
 
 		window.pane = pane;
