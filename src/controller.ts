@@ -1,8 +1,4 @@
-import {
-	BladeController,
-	createBlade,
-	ViewProps,
-} from '@tweakpane/core';
+import {BladeController, createBlade, ViewProps} from '@tweakpane/core';
 
 import {PluginView} from './view';
 
@@ -12,7 +8,6 @@ interface Config {
 }
 
 export class PluginController extends BladeController<PluginView> {
-
 	constructor(doc: Document, config: Config) {
 		super({
 			blade: createBlade(),

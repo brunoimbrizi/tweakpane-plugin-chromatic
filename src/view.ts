@@ -1,8 +1,4 @@
-import {
-	ClassName,
-	View,
-	ViewProps
-} from '@tweakpane/core';
+import {ClassName, View, ViewProps} from '@tweakpane/core';
 
 interface Config {
 	colors: Array<string>;
@@ -19,7 +15,7 @@ export class PluginView implements View {
 		this.element.classList.add(className());
 		config.viewProps.bindClassModifiers(this.element);
 
-		config.colors.forEach(color => {
+		config.colors.forEach((color) => {
 			const colorElem = doc.createElement('div');
 			colorElem.classList.add(className('col'));
 			colorElem.style.backgroundColor = color;

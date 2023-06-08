@@ -38,16 +38,13 @@ export const ChromaticBladePlugin: BladePlugin<PluginBladeParams> = {
 			viewProps: args.viewProps,
 		});
 
-		return new LabelController(
-			args.document,
-			{
-				blade: args.blade,
-				props: ValueMap.fromObject<LabelPropsObject>({
-					label: args.params.label,
-				}),
-				valueController: controller,
-			},
-		);
+		return new LabelController(args.document, {
+			blade: args.blade,
+			props: ValueMap.fromObject<LabelPropsObject>({
+				label: args.params.label,
+			}),
+			valueController: controller,
+		});
 	},
 
 	api(args) {
