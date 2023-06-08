@@ -1,6 +1,8 @@
 # Tweakpane plugin chromatic
 Color palette viewer for [Tweakpane][tweakpane].
 
+![tweakpane-plugin-chromatic](https://github.com/brunoimbrizi/tweakpane-plugin-chromatic/assets/880280/d5ecf5bc-bb27-4dd2-b223-c620d744df0a)
+
 
 ## Installation
 
@@ -18,6 +20,7 @@ Color palette viewer for [Tweakpane][tweakpane].
 
 ### Package
 ```js
+
 import {Pane} from 'tweakpane';
 import * as ChromaticPlugin from 'tweakpane-plugin-chromatic';
 
