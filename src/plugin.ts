@@ -1,6 +1,5 @@
 import {
 	BaseBladeParams,
-	BladeApi,
 	BladePlugin,
 	LabelController,
 	LabelPropsObject,
@@ -9,7 +8,9 @@ import {
 	ValueMap,
 } from '@tweakpane/core';
 
+import {PluginApi} from './api';
 import {PluginController} from './controller';
+import {PluginPropsObject} from './view';
 
 export interface PluginBladeParams extends BaseBladeParams {
 	colors: Array<string>;
@@ -34,7 +35,9 @@ export const ChromaticBladePlugin: BladePlugin<PluginBladeParams> = {
 
 	controller(args) {
 		const controller = new PluginController(args.document, {
-			colors: args.params.colors,
+			props: ValueMap.fromObject<PluginPropsObject>({
+				colors: args.params.colors,
+			}),
 			viewProps: args.viewProps,
 		});
 
@@ -54,6 +57,6 @@ export const ChromaticBladePlugin: BladePlugin<PluginBladeParams> = {
 		if (!(args.controller.valueController instanceof PluginController)) {
 			return null;
 		}
-		return new BladeApi(args.controller);
+		return new PluginApi(args.controller);
 	},
 };

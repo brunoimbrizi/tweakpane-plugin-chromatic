@@ -1,6 +1,6 @@
 {
   "name": "tweakpane-plugin-chromatic",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Color palette viewer for Tweakpane",
   "main": "dist/tweakpane-plugin-chromatic.js",
   "types": "dist/types/index.d.ts",

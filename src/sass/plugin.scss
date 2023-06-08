@@ -16,18 +16,7 @@
 		opacity: 0.5;
 	}
 
-	&_text {
-		color: var(--in-fg);
-
-		bottom: 2px;
-		font-size: 0.9em;
-		line-height: 0.9;
-		opacity: 0.5;
-		position: absolute;
-		right: 2px;
-	}
-
 	&_col {
-		height: 80%;
+		height: 60%;
 	}
 }

@@ -1,18 +1,24 @@
-import {BladeController, createBlade, ViewProps} from '@tweakpane/core';
+import {Controller, ViewProps} from '@tweakpane/core';
 
-import {PluginView} from './view';
+import {PluginProps, PluginView} from './view';
 
 interface Config {
-	colors: Array<string>;
+	props: PluginProps;
 	viewProps: ViewProps;
 }
 
-export class PluginController extends BladeController<PluginView> {
+export class PluginController implements Controller<PluginView> {
+	public readonly props: PluginProps;
+	public readonly view: PluginView;
+	public readonly viewProps: ViewProps;
+
 	constructor(doc: Document, config: Config) {
-		super({
-			blade: createBlade(),
-			view: new PluginView(doc, config),
-			viewProps: config.viewProps,
+		this.props = config.props;
+		this.viewProps = config.viewProps;
+
+		this.view = new PluginView(doc, {
+			props: this.props,
+			viewProps: this.viewProps,
 		});
 	}
 }
