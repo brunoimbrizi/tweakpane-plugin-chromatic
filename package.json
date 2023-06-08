@@ -1,11 +1,21 @@
 {
   "name": "tweakpane-plugin-chromatic",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Color palette viewer for Tweakpane",
   "main": "dist/tweakpane-plugin-chromatic.js",
   "types": "dist/types/index.d.ts",
   "author": "brunoimbrizi",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunoimbrizi/tweakpane-plugin-chromatic.git"
+  },
+  "keywords": [
+    "tweakpane",
+    "tweakpane-plugin",
+    "palette",
+    "chromatic"
+  ],
   "files": [
     "dist"
   ],
